@@ -1,13 +1,92 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  --white: #dad7cd;
+  --g0: #a3b18a;
+  --g1: #588157;
+  --g2: #3a5a40;
+  --g3: #344e41;
+  --g4: #17241d;
+  user-select: none;
+  /* supported by Chrome and Opera */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body,
+html {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+
+}
+
+
+body {
+  color: var(--white);
+  background-color: var(--g4);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  background:none;
+  outline: none;
+  color: var(--white);
+  border: 2px var(--white) solid;
+  padding: 7px;
+  font-size: 1.5em;
+  transition: ease .1s;
+
+
+}
+
+.App {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  width: 600px;
+  height: 600px;
+  background-color: var(--g3);
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 15px;
+  margin: 5px;
+}
+
+.card{
+  background-color: var(--g0);
+}
+
+img{
+  -webkit-user-drag: none;
+  -moz-user-drag: none;
+  width: 100%;
+  height: 100%;
+}
+
+
+.card:hover{
+  cursor: pointer;
+
+}
+button:hover{
+  cursor: pointer;
+  background-color:var(--g1)
 }
